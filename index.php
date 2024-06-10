@@ -1,34 +1,16 @@
 <?php
 
-//$age = 21;
-//$age = 15;
-//$age = -1;
-//$adult = false;
+$temp = 15;
+$cloudy = false;
 
-$hours = 50;
-$rate = 15;
-$weekly_pay = null;
-
-//if ($age >= 18) {
-//    echo "You may enter";
-//} elseif ($age <= 0) {
-//    echo "Invalid Age";
-//} else {
-//    echo "You may not enter";
-//}
-
-//if ($adult){
-//    echo "You are an adult";
-//} else {
-//    echo "Your a child";
-//}
-if ($hours <= 0) {
-    $weekly_pay = 0;
-} else if ($hours <= 40) {
-    $weekly_pay = $hours * $rate;
+if ($temp <= 0 || $temp > 30) {
+    echo "The weather is bad<br>";
 } else {
-    $weekly_pay = ($rate * 40) + (($hours - 40) * ($rate * 1.5));
+    echo "The weather is good<br>";
 }
 
-
-echo "You made \${$weekly_pay} this week";
+if (!$cloudy){
+    echo "It's sunny<br>";
+} else {
+    echo  "It's cloudy<br>";
+}
