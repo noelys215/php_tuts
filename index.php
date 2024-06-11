@@ -1,15 +1,22 @@
 <?php
-$age = 25;
-$citizen = true;
+$grade = "Apple";
 
-if ($age >= 18 && $citizen) echo "You can vote<br>";
-else echo "You cannot vote<br>";
-
-$child = false;
-$senior = false;
-$ticket = null;
-
-if ($child || $senior) $ticket = 10;
-else $ticket = 15;
-
-echo "The ticket price is \$$ticket";
+switch ($grade) {
+    case "A":
+        echo "You Did Great!";
+        break;
+    case "B":
+        echo "You Did Good!";
+        break;
+    case "C":
+        echo "You Did Okay!";
+        break;
+    case "D":
+        echo "You Did Poorly!";
+        break;
+    case "D":
+        echo "you failed...";
+        break;
+    default:
+        echo "Invalid Grade";
+}
