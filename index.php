@@ -1,22 +1,23 @@
 <?php
-$grade = "Apple";
+$date = date("");
+//$date = "Wednesday";
 
-switch ($grade) {
-    case "A":
-        echo "You Did Great!";
+switch ($date) {
+    case "Monday":
+        echo "I hate mondays";
         break;
-    case "B":
-        echo "You Did Good!";
+    case "Tuesday":
+        echo "Tuesdays are okay.";
         break;
-    case "C":
-        echo "You Did Okay!";
+    case "Wednesday":
+        echo "It's wednesday my dudes";
         break;
-    case "D":
-        echo "You Did Poorly!";
+    case "Thursday":
+        echo "Thorsday";
         break;
-    case "D":
-        echo "you failed...";
+    case "Friday":
+        echo "Friyay";
         break;
     default:
-        echo "Invalid Grade";
+        echo "Invalid Day";
 }
