@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no,
+          initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
 <form action="index.php" method="post">
-    <label for="">Enter a Country</label><br>
-    <input type="text" name="country"><br>
-    <input type="submit">
+    <label>Username: </label><br>
+    <input type="text" name="username"><br>
+    <label>Password: </label><br>
+    <input type="password" name="password"><br>
+    <input type="submit" name="login" value="Log In"><br>
 </form>
 </body>
 </html>
 
 <?php
-$foods = array("apples", "oranges","mango", "coconut");
 
-$capitals = array(
-    "USA" => "Washington D.C",
-    "Japan" => "Tokyo",
-    "South Korea" => "Seoul",
-    "India" => "New Delhi",
-);
+//foreach ($_POST as $key => $value) {
+//    echo $key . ": " . $value . "<br>";
+//}
 
-$capitals['USA'] = "New Jersey";
-$capitals['Puerto Rico'] = "San Juan";
-//array_shift($capitals);
+if(isset($_POST['login']))
+{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-//foreach ($capitals as $capital => $name) echo "{$capital} | $name<br>";
+    if(empty($username)){
+        echo "Username is required";
+    } elseif(empty($password)){
+        echo "Password is required";
+    } else {
+        echo "Login Successful, Hey {$username}!";
+    }
 
-
-$capital = $capitals[$_POST["country"]];
-
-echo"The capital is {$capital}";
-
-?>
+}
