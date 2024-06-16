@@ -25,14 +25,13 @@
 //    echo $key . ": " . $value . "<br>";
 //}
 
-if(isset($_POST['login']))
-{
+if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    if(empty($username)){
+    if (empty($username)) {
         echo "Username is required";
-    } elseif(empty($password)){
+    } elseif (empty($password)) {
         echo "Password is required";
     } else {
         echo "Login Successful, Hey {$username}!";
